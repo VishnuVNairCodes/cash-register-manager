@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+    <body>
+        <h1>Cash Register Manager</h1>
+        <p class = "app-description">Enter the bill amount and cash given by the customer and know how to return the balance with minimum number of notes</p>
+        <div class = "container-bill"><p><strong><h3 style="color:black">Bill Amount:</h3></strong></p>
+            <input class="bill-amount"></input>
+            <p class="error-message bill-not-filled hidden">*please fill in the bill amount</p>
+            <p class="error-message bill-not-number hidden">*bill amount should be a number</p>
+            <p class="error-message bill-not-greater-than-zero hidden">*bill amount should be a number greater than 0</p>
+            <div><button class="btn-next">Next</button></div>
+        </div>
+        
+        <div class = "container-cash hidden"><p><strong><h3 style="color:black">Cash Given:</h3></strong></p>
+            <input class="cash-given"></input>
+            <p class="error-message cash-not-filled hidden">*please fill in the cash given</p>
+            <p class="error-message cash-not-number hidden">*cash given should be a number</p>
+            <p class="error-message cash-not-greater-than-bill hidden">*cash given should be greater than the bill amount</p>
+            <div><button class="btn-check">Check</button></div>
+        </div>
+        
+        <table class="table-return-balance hidden">
+            <caption><h2 style="color:black">Return Change</h2></caption>
+            <tr>
+                <th>No. of Notes</th>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+            </tr>
+            <tr>
+              <th>Note</th>
+              <td>2000</td>
+              <td>500</td>
+              <td>100</td>
+              <td>20</td>
+              <td>10</td>
+              <td>5</td>
+              <td>1</td>
+          </tr>
+        </table>
+    </body>
+    <script src = "script.js"></script>
+</html>
